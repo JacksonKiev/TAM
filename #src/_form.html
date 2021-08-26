@@ -1,0 +1,93 @@
+<div class="selection _scr-item">
+	<form data-ajax="true" action="sendmail.php" id="form" class="selection__body" method="POST">
+		<h1 class="selection__title">Подбор Оборудования</h1>
+		<div class="selection__item"><label for="formName" class="selection__label">Имя*:</label>
+			<input id='formName' type="text" name='name' placeholder="Введить ім'я" class="selection__input _req">
+		</div>
+		<div class="selection__item"><label for="formEmail" class="selection__label ">E-mail*:</label>
+			<input id='formEmail' type="text" name='email' placeholder="Введить електронну пошту"
+				class="selection__input _email _req">
+		</div>
+		<div class="selection__item"><label for="formPhone" class="selection__label ">Телефон*:</label>
+			<input id='formPhone' type="text" name='phone' data-value="" placeholder="Введить номер телефону"
+				class="selection__input _phone _req">
+		</div>
+		<div class="selection__item"><label for="formCar" class="selection__label ">Автомобиль*:</label>
+			<input id='formCar' type="text" name='car' placeholder="Введить марку автомобіля" data-value=""
+				class="selection__input 	_req">
+		</div>
+		<div class="selection__item year"><label for="formYear" class="selection__label ">Рік
+				випуску*:</label>
+			<input id='formYear' type="text" name='year' data-value="" class="selection__input  _req">
+		</div>
+		<div class="selection__item volume"><label for="formVolume" class="selection__label ">Обьем
+				двигуна*:</label>
+			<input id='formVolume' type="text" name='Volume' data-value="" class="selection__input  _req">
+		</div>
+		<div class="selection__item">
+			<div class="selection__label">Кондтціонер водія</div>
+			<div class="options">
+				<div class="options__item">
+					<input id="АС+" checked type="radio" value="right" name="hand" class="options__input">
+					<label for="АС+" class="options__label"><span>Присутний</span></label>
+				</div>
+
+				<div class="options__item">
+					<input id="АС-" type="radio" value="left" name="hand" class="options__input">
+					<label for="АС-" class="options__label"><span>Відсутний</span></label>
+				</div>
+			</div>
+		</div>
+		<div class="selection__item">
+			<div class="selection__label">Привід</div>
+			<div class="options">
+				<div class="options__item">
+					<input id="fwd" checked type="radio" value="передній" name="drive" class="options__input">
+					<label for="fwd" class="options__label"><span>Передній</span></label>
+				</div>
+
+				<div class="options__item">
+					<input id="rwd" type="radio" value="задній" name="drive" class="options__input">
+					<label for="rwd" class="options__label"><span>Задній</span></label>
+				</div>
+			</div>
+		</div>
+		<div class="selection__item">
+			<div class="selection__label">Єкологічний клас "Євро"</div>
+
+			<select name="Euro" class="select">
+				<option value="na">Неизвестно</option>
+				<option value="3">Євро 3</option>
+				<option value="4">Євро 4</option>
+				<option value="5" selected="selected">Євро 5</option>
+				<option value="6">Євро 6</option>
+
+			</select>
+		</div>
+		<div class="selection__item">
+			<label for="formMessage" class="selection__label">Додаткова інформація:</label>
+			<textarea name="Message" id="formMessage" placeholder="марка двигуна, трансмисия и т.с."
+				class="selection__input"></textarea>
+		</div>
+		<div class="selection__item">
+			<div class="selection__label">Прикрепить фото</div>
+			<div class="file">
+				<div class="file__item">
+					<input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+					<div class="file__button">Выбрать</div>
+					<div id="formPreview" class="file__preview">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="selection__item">
+			<div class="checkbox"><input type="checkbox" checked class="checkbox__input _req" id="formAgreement"
+					name="agreement">
+				<label for="formAgreement" class="checkbox__label">Я даю свою згоду на всі обробку персональної
+					інформації</label>
+			</div>
+		</div>
+		<button class="selection__button" type="submit">Отправить</button>
+	</form>
+</div>

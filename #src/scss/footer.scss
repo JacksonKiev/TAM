@@ -1,0 +1,144 @@
+footer {
+    display: flex;
+    position: fixed;
+    padding: 20px 0;
+    bottom: -20px;
+    left: 0;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    z-index: 50;
+    width: 100%;
+
+
+
+
+
+
+}
+
+
+//====================================================================================================
+.footer {
+
+
+    // .footer__content
+
+    &__content {
+
+        background-color: rgb(214, 206, 206);
+        height: 40px;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .footer__menu
+
+    &__menu {
+        background-color: rgb(214, 206, 206);
+        // margin: 0 50% 0 auto;
+        // width: 70%;
+    }
+
+    .menu {
+
+
+        // .menu__body
+
+        &__body {
+
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        // .menu__list
+
+        &__list {}
+
+        // .menu__item
+
+        &__item {}
+
+        // .menu__link
+
+        &__link {
+            &:hover {
+                @media (min-width:$md2+px) {
+                    background-color: rgb(219, 215, 215);
+                }
+            }
+        }
+    }
+
+    // .footer__widget
+    &__widget {
+
+        // .footer__widget_social
+
+        &_social {
+            text-align: right;
+
+            @media screen and (max-width:560px) {
+                .main-footer__widget_social {
+                    text-align: center
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+.widget-social-links {
+    display: inline-block;
+    vertical-align: middle;
+    width: 36px;
+    height: 36px;
+    // border: 1px solid #18191b;
+    position: relative;
+
+    &+.widget-social-links {
+        margin-left: 15px
+    }
+
+    &:active path,
+    &:focus path,
+    &:hover path {
+        fill: #c50c0c;
+        transition: fill .5s
+    }
+
+    svg {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+.fb {}
+
+.vk {}
+
+.youtube {}
+
+.insta {}
+
+// // ._container
+
+// &_container {}
+
+
+
+
+
+//====================================================================================================

@@ -1,0 +1,39 @@
+<div class="selection selection_contacts">
+	<div class="selection__title-block title-block">
+
+	</div>
+
+
+	<form data-ajax="true" action="sendmail.php" id="form" class="selection__body" method="POST">
+		<h1 class="selection__title selection__title_contact">Зв'яжіться з нами</h1>
+		<div class='contacts-input'>
+			<div class="selection__item"><label for="formName" class="selection__label">Имя*:</label>
+				<input id='formName' type="text" name='name' placeholder="Введить ім'я" class="selection__input _req">
+			</div>
+			<div class="selection__item"><label for="formEmail" class="selection__label ">E-mail*:</label>
+				<input id='formEmail' type="text" name='email' placeholder="Введить електронну пошту"
+					class="selection__input _email _req">
+			</div>
+			<div class="selection__item"><label for="formPhone" class="selection__label ">Телефон*:</label>
+				<input id='formPhone' type="text" name='phone' data-value="" placeholder="Введить номер телефону"
+					class="selection__input _phone _req">
+			</div>
+		</div>
+
+		<div class="selection__item">
+			<label for="formMessage" class="selection__label">Повідомлення:</label>
+			<textarea name="Message" id="formMessage"
+				placeholder="Залиште повідомлення чи задайте запитання - ми обов'язково з Вами звяжемось"
+				class="selection__input"></textarea>
+		</div>
+
+		<div class="selection__item">
+			<div class="checkbox"><input type="checkbox" checked class="checkbox__input _req" id="formAgreement"
+					name="agreement">
+				<label for="formAgreement" class="checkbox__label">Я даю свою згоду на обробку персональної
+					інформації</label>
+			</div>
+		</div>
+		<button class="selection__button" type="submit">Отправить</button>
+	</form>
+</div>
