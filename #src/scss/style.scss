@@ -51,7 +51,7 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	// opacity: 0;
+	opacity: 0;
 	transition: opacity 0.8s ease 0s;
 
 
@@ -125,9 +125,6 @@ body {
 .page {
 
 	max-width: $maxWidthContainer;
-
-
-
 }
 
 //===================================================================================================================================
@@ -197,26 +194,17 @@ body {
 		min-width: 0;
 		min-height: 100%;
 
-		@media (max-width:$md2+px) {
-			width: 100%;
-			left: 0;
-			width: 100%;
-			min-width: 100%;
-		}
-
 		&_contacts {
 			top: 163px;
 
 
 		}
 
-		// &>div {
-		// 
-		// 	padding-top: 120px;
-
-		// 	height: 100vh;
-
-		// }
+		@media (max-width:$md2+px) {
+			width: 100%;
+			left: 0;
+			max-width: 100%;
+		}
 
 	}
 
@@ -275,14 +263,6 @@ body {
 	&__screen {
 		font-size: 18px;
 		line-height: 1.4;
-
-		@media (max-width:$md2+px) {
-
-			&:nth-child(2),
-			&:nth-child(3) {
-				display: none;
-			}
-		}
 	}
 }
 
@@ -290,7 +270,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
 
 	flex: 1 0 100%;
 	position: relative;
@@ -344,6 +323,10 @@ body {
 	& figcaption {
 		margin-left: 5px;
 	}
+
+	@media (max-width:$md2+px) {
+		right: 26%;
+	}
 }
 
 .more__item_prev {
@@ -369,7 +352,9 @@ body {
 
 
 
-
+	@media (max-width:$md2+px) {
+		left: 8%;
+	}
 }
 
 
@@ -434,11 +419,6 @@ body {
 		margin: 0px 0px 30px 0px;
 		max-width: 70%;
 		margin: 0 auto;
-
-		@media (max-width:$md2+px) {
-			width: 95%;
-			min-width: 100%;
-		}
 	}
 
 	// .one__links
@@ -451,11 +431,6 @@ body {
 		height: 100%;
 		max-width: 90%;
 		margin: 0 auto;
-
-		@media (max-width:$md2+px) {
-			flex-direction: column;
-		}
-
 
 		div {
 
@@ -470,11 +445,11 @@ body {
 
 			figcaption {
 				font-size: 20px;
-				// margin-bottom: 30px;
+				margin-bottom: 20px;
 				color: #000;
 				font-weight: 600;
 				position: relative;
-				// top: -90%;
+				top: 60px;
 			}
 
 			img {
@@ -648,6 +623,9 @@ body {
 				padding-top: 20px;
 			}
 
+			@media (max-width:$md2+px) {
+				display: none;
+			}
 		}
 
 
@@ -702,12 +680,9 @@ body {
 
 
 .hou {
-	// @media (max-width:$md2+px) {
-	// 	display: none;
-	// }
+
 
 	// .hou__small
-	border: 1px solid #000;
 
 	&__small {
 		width: 97%;
@@ -732,11 +707,6 @@ body {
 }
 
 .isol {
-	// @media (max-width:$md2+px) {
-	// 	display: none;
-	// }
-	display: none;
-
 	img {
 		max-height: 300px;
 		overflow: hidden;
@@ -799,15 +769,27 @@ body {
 
 	// .isol__item-simple
 
-	&__item-simple {}
+	&__item-simple {
+		@media (max-width:$md2+px) {
+			flex: 1 0 100%;
+		}
+	}
 
 	// .isol__item-doors
 
-	&__item-doors {}
+	&__item-doors {
+		@media (max-width:$md2+px) {
+			display: none;
+		}
+	}
 
 	// .isol__item-side-door
 
-	&__item-side-door {}
+	&__item-side-door {
+		@media (max-width:$md2+px) {
+			display: none;
+		}
+	}
 
 
 	// .isol__simple
@@ -821,6 +803,10 @@ body {
 	// .isol__side-door
 
 	&__side-door {}
+
+	@media (max-width:$md2+px) {
+		padding-top: 0;
+	}
 }
 
 .title {}
@@ -954,11 +940,12 @@ body {
 .gallery-block {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-start;
 	margin: 0 auto;
 	// .gallery-block__item
 
 	&__item {
-		flex: 0 1 21%;
+		flex: 0 1 20%;
 		margin: 0 0px 10px 0;
 		padding: 0 10px;
 
@@ -966,6 +953,16 @@ body {
 			max-width: 100%;
 			object-fit: contain;
 		}
+
+		@media (max-width:$md2+px) {
+
+			flex: 0 1 30%;
+		}
+	}
+
+	@media (max-width:$md2+px) {
+		justify-content: center;
+
 	}
 }
 

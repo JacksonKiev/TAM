@@ -3,8 +3,11 @@ body._lock {
 	.header._active {
 		height: 100%;
 
+
+
 		.menu__list {
-			margin-top: 25%;
+			margin: 0 auto;
+			margin-top: 50px;
 			display: flex;
 		}
 
@@ -48,6 +51,15 @@ body._lock {
 		}
 	}
 
+	&._active {
+		.header__content {
+			@media (max-width:$md2+px) {
+				margin-top: 50px;
+				flex-direction: column;
+			}
+		}
+	}
+
 
 	//.header__logo
 	&__logo {
@@ -85,7 +97,7 @@ body._lock {
 
 	&__menu {
 		@media (max-width:$md2+px) {
-			margin-left: 25%;
+			margin: 0 auto;
 
 		}
 
