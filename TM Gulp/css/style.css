@@ -4105,10 +4105,6 @@ body._lock .header._active .menu__list {
             flex-direction: column;
   }
 
-  .header__logo span {
-    display: none;
-  }
-
   .header__logo-tm {
     display: none;
   }
