@@ -84,6 +84,7 @@ if (location.hash) {
 //Menu
 let iconMenu = document.querySelector(".icon-menu");
 let header = document.querySelector(".header");
+let footer = document.querySelector(".footer");
 if (iconMenu != null) {
 	let delay = 500;
 	let menuBody = document.querySelector(".menu__body");
@@ -93,6 +94,7 @@ if (iconMenu != null) {
 			iconMenu.classList.toggle("_active");
 			menuBody.classList.toggle("_active");
 			header.classList.toggle("_active");
+			footer.classList.toggle("_active");
 		}
 	});
 };

@@ -1,4 +1,8 @@
-footer {
+footer {}
+
+
+//====================================================================================================
+.footer {
     display: flex;
     position: fixed;
     padding: 20px 0;
@@ -10,16 +14,23 @@ footer {
     z-index: 50;
     width: 100%;
 
+    @media (max-width:$md2+px) {
+        display: none;
 
+        &._active {
+            display: block;
+            margin-bottom: 40px;
 
+            .footer__content {
+                display: block;
 
+                .menu__list {
+                    display: block;
+                }
+            }
+        }
+    }
 
-
-}
-
-
-//====================================================================================================
-.footer {
 
 
     // .footer__content
@@ -33,6 +44,8 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+
     }
 
     // .footer__menu
@@ -41,35 +54,42 @@ footer {
         background-color: rgb(214, 206, 206);
         // margin: 0 50% 0 auto;
         // width: 70%;
-    }
-
-    .menu {
 
 
-        // .menu__body
+        .menu {
 
-        &__body {
 
-            margin: 0 auto;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-        }
+            // .menu__body
 
-        // .menu__list
+            &__body {
 
-        &__list {}
+                margin: 0 auto;
+                text-align: center;
+                display: flex;
+                justify-content: center;
 
-        // .menu__item
+                @media (max-width:$md2+px) {
+                    top: 52%;
+                }
 
-        &__item {}
 
-        // .menu__link
+            }
 
-        &__link {
-            &:hover {
-                @media (min-width:$md2+px) {
-                    background-color: rgb(219, 215, 215);
+            // .menu__list
+
+            &__list {}
+
+            // .menu__item
+
+            &__item {}
+
+            // .menu__link
+
+            &__link {
+                &:hover {
+                    @media (min-width:$md2+px) {
+                        background-color: rgb(219, 215, 215);
+                    }
                 }
             }
         }
@@ -83,11 +103,10 @@ footer {
         &_social {
             text-align: right;
 
-            @media screen and (max-width:560px) {
-                .main-footer__widget_social {
-                    text-align: center
-                }
+            @media screen and (max-width:980px) {
+                text-align: center
             }
+
         }
     }
 
