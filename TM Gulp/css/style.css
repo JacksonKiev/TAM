@@ -4219,6 +4219,10 @@ footer {
     display: none;
   }
 
+  .screen__content.gallery {
+    padding: 0;
+  }
+
   .more__item_next {
     right: 26%;
   }
