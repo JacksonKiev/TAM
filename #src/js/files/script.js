@@ -117,35 +117,86 @@ pageSlider.init();
 
 
 let intViewportWidth = window.innerWidth;
-console.log(intViewportWidth);
-// var width = $(window).width();
-// console.log(window.innerWidth);
-// if (width <= 980) {
-//     $('[name="viewport"]').attr('content', 'width=device-width, initial-scale=1');
-//     $(".sec6__slider").removeClass('_swiper');
+let isol = document.querySelector('.isol__types');
 
-// } else {
-//     $('[name="viewport"]').attr('content', 'width=1920');
-//     $(".sec6__slider").toggleClass('sec6__grid');
-//     $(".sec6__slider").toggleClass('_swiper');
-// }
 
 const head = document.head;
 const meta = document.querySelector('meta[name="viewport"]');
 const content = meta.getAttribute('content');
-// const newMeta = document.createElement('meta');
-if (intViewportWidth <= 980) {
 
-    // newMeta.setAttribute('name', 'viewport');
-    // newMeta.setAttribute('content', content.replace(/width=([^,]+),/i, 'width=device-width, initial-scale=1'));
+if (intViewportWidth <= 900) {
+    meta.setAttribute('content', 'width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0');
+    // isol.classList.add('_swiper');
 
 
-    meta.setAttribute('content', 'width=device-width, initial-scale=1');
+} else {
+    meta.setAttribute('content', 'width=1920');
+    // isol.classList.remove('_swiper');
 }
-// else {
-//     newMeta.setAttribute('name', 'viewport');
-//     newMeta.setAttribute('content', content.replace(/width=([^,]+),/i, 'width=1920'));
 
-// }
-// head.removeChild(meta);
-// head.appendChild(newMeta);
+// window.addEventListener('resize', function () {
+//             if (window.innerWidth <= 1400) {
+//                 // isol.classList.remove('_swiper');
+//                 //     let sliderSlider4 = new Swiper('.isol__types', {
+//                 //         /*
+//                 //         effect: 'fade',
+//                 //         autoplay: {
+//                 //             delay: 3000,
+//                 //             disableOnInteraction: false,
+//                 //         },
+//                 //         */
+
+//                 //         observer: true,
+//                 //         observeParents: true,
+//                 //         slidesPerView: 1,
+//                 //         spaceBetween: 0,
+//                 //         // autoHeight: true,
+//                 //         speed: 800,
+//                 //         //touchRatio: 0,
+//                 //         //simulateTouch: false,
+//                 //         loop: true,
+//                 //         //preloadImages: false,
+//                 //         //lazy: true,
+//                 //         // Dotts
+//                 //         //pagination: {
+//                 //         //	el: '.slider-quality__pagging',
+//                 //         //	clickable: true,
+//                 //         //},
+//                 //         // Arrows
+//                 //         navigation: {
+//                 //             nextEl: '.large__controls .more__item_next',
+//                 //             prevEl: '.large__controls .more__item_prev',
+//                 //         },
+//                 //         /*
+//                 //         breakpoints: {
+//                 //             320: {
+//                 //                 slidesPerView: 1,
+//                 //                 spaceBetween: 0,
+//                 //                 autoHeight: true,
+//                 //             },
+//                 //             768: {
+//                 //                 slidesPerView: 2,
+//                 //                 spaceBetween: 20,
+//                 //             },
+//                 //             992: {
+//                 //                 slidesPerView: 3,
+//                 //                 spaceBetween: 20,
+//                 //             },
+//                 //             1268: {
+//                 //                 slidesPerView: 4,
+//                 //                 spaceBetween: 30,
+//                 //             },
+//                 //         },
+//                 //         */
+//                 //         on: {
+//                 //             lazyImageReady: function () {
+//                 //                 ibg();
+//                 //             },
+//                 //         }
+//                 //         // And if we need scrollbar
+//                 //         //scrollbar: {
+//                 //         //	el: '.swiper-scrollbar',
+//                 //         //},
+//                 //     });
+//                 // }
+//             });

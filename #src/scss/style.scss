@@ -310,7 +310,7 @@ body {
 
 	position: absolute;
 	top: 95%;
-	right: 43%;
+	right: 30%;
 
 	width: 33px;
 	height: 30px;
@@ -331,7 +331,7 @@ body {
 
 .more__item_prev {
 	position: absolute;
-	left: 40%;
+	left: 30%;
 	top: 90%;
 
 	width: 33px;
@@ -419,6 +419,7 @@ body {
 		margin: 0px 0px 30px 0px;
 		max-width: 70%;
 		margin: 0 auto;
+		margin-bottom: 20px;
 	}
 
 	// .one__links
@@ -441,15 +442,16 @@ body {
 			figure {
 
 				height: 100%;
+				max-height: 250px;
 			}
 
 			figcaption {
 				font-size: 20px;
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 				color: #000;
 				font-weight: 600;
-				position: relative;
-				top: 60px;
+				// position: relative;
+				// top: 60px;
 			}
 
 			img {
@@ -599,6 +601,11 @@ body {
 
 			flex: 0 1 30%;
 
+			@media (max-width: 1300px) {
+				transform: translateY(-20px) scale(0.7);
+
+			}
+
 			table {
 
 				// width: 80%;
@@ -737,6 +744,9 @@ body {
 		margin: 0 auto;
 		justify-content: space-between;
 		max-width: 80%;
+
+
+
 	}
 
 
@@ -753,8 +763,10 @@ body {
 	// .isol__item
 
 	&__item {
+		@media (min-width: 1400px) {
+			flex: 0 0 30%;
+		}
 
-		flex: 0 0 30%;
 		overflow: hidden;
 
 		img {
@@ -954,7 +966,7 @@ body {
 			object-fit: contain;
 		}
 
-		@media (max-width:$md2+px) {
+		@media (max-width:1240px) {
 
 			flex: 0 1 30%;
 		}

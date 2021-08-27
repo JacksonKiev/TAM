@@ -3502,7 +3502,7 @@ footer {
 .more__item_next {
   position: absolute;
   top: 95%;
-  right: 43%;
+  right: 30%;
   width: 33px;
   height: 30px;
   cursor: pointer;
@@ -3520,7 +3520,7 @@ footer {
 
 .more__item_prev {
   position: absolute;
-  left: 40%;
+  left: 30%;
   top: 90%;
   width: 33px;
   height: 30px;
@@ -3603,6 +3603,7 @@ footer {
   margin: 0px 0px 30px 0px;
   max-width: 70%;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .one__links {
@@ -3624,15 +3625,14 @@ footer {
 
 .one__links div figure {
   height: 100%;
+  max-height: 250px;
 }
 
 .one__links div figcaption {
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #000;
   font-weight: 600;
-  position: relative;
-  top: 60px;
 }
 
 .one__links div img {
@@ -3813,9 +3813,6 @@ footer {
 }
 
 .isol__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
   overflow: hidden;
 }
 
@@ -3994,6 +3991,30 @@ footer {
   }
 }
 
+@media (min-width: 1400px) {
+  .isol__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .tabs-block .table__descr {
+    -webkit-transform: translateY(-20px) scale(0.7);
+        -ms-transform: translateY(-20px) scale(0.7);
+            transform: translateY(-20px) scale(0.7);
+  }
+}
+
+@media (max-width: 1240px) {
+  .gallery-block__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 30%;
+            flex: 0 1 30%;
+  }
+}
+
 @media (max-width: 1182px) {
   ._container {
     max-width: 970px;
@@ -4160,12 +4181,6 @@ footer {
 
   .isol {
     padding-top: 0;
-  }
-
-  .gallery-block__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 30%;
-            flex: 0 1 30%;
   }
 
   .gallery-block {
