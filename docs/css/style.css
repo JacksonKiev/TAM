@@ -3642,6 +3642,10 @@ footer {
   height: 100%;
 }
 
+.one__links div:not(:last-child) {
+  margin-bottom: 100px;
+}
+
 .list {
   margin: 30px 0px 10px 0px;
 }
@@ -4016,6 +4020,7 @@ footer {
 
   .one__links div figcaption {
     font-size: 16px;
+    margin-bottom: 30px;
   }
 
   .tabs-block .table__title {
@@ -4062,6 +4067,12 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 30%;
             flex: 0 1 30%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .screen__content.gallery {
+    padding-left: 90px;
   }
 }
 
@@ -4203,12 +4214,36 @@ footer {
     display: none;
   }
 
+  .screen:nth-child(2),
+  .screen:nth-child(3) {
+    display: none;
+  }
+
   .more__item_next {
     right: 26%;
   }
 
   .more__item_prev {
     left: 8%;
+  }
+
+  .one__about {
+    display: none;
+  }
+
+  .one__links div figcaption {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .one__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .tabs-block .table__descr {
