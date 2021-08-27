@@ -70,8 +70,13 @@ body._lock {
 		font-weight: 600;
 		text-transform: uppercase;
 
-		@media (max-width:$md2+px) {
-			span {
+
+		span {
+			@media (max-width: 1400px) {
+				font-size: 20px;
+			}
+
+			@media (max-width:$md2+px) {
 				display: none;
 			}
 		}
@@ -86,6 +91,11 @@ body._lock {
 
 	&__logo-tm {
 		margin: 0px 0px 0px 40px;
+
+		@media (max-width: 1400px) {
+			transform: scale(0.75);
+
+		}
 
 		@media (max-width:$md2+px) {
 			display: none;

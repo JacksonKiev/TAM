@@ -274,11 +274,26 @@ body {
 	flex: 1 0 100%;
 	position: relative;
 
+	@media (max-width:$md2+px) {
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			display: none;
+		}
+
+	}
 
 	&__content {
 
 		flex: 1 0 auto;
 		padding: 150px 25px 25px 25px;
+
+		&.gallery {
+			@media (max-width: 1200px) {
+				padding-left: 90px;
+
+			}
+		}
 	}
 
 	&__img {
@@ -402,6 +417,10 @@ body {
 	font-weight: 600;
 	margin-bottom: 30px;
 	text-align: center;
+
+	@media (max-width: 1400px) {
+		font-size: 25px;
+	}
 }
 
 .one {
@@ -420,6 +439,10 @@ body {
 		max-width: 70%;
 		margin: 0 auto;
 		margin-bottom: 20px;
+
+		@media (max-width:$md2+px) {
+			display: none;
+		}
 	}
 
 	// .one__links
@@ -450,6 +473,19 @@ body {
 				margin-bottom: 10px;
 				color: #000;
 				font-weight: 600;
+
+				@media (max-width: 1400px) {
+					font-size: 16px;
+					margin-bottom: 30px;
+
+				}
+
+
+				@media (max-width:$md2+px) {
+					font-size: 25px;
+					text-align: center;
+				}
+
 				// position: relative;
 				// top: 60px;
 			}
@@ -460,6 +496,17 @@ body {
 				object-fit: contain;
 				height: 100%;
 			}
+		}
+
+		div:not(:last-child) {
+			margin-bottom: 100px;
+		}
+
+		@media (max-width:$md2+px) {
+			flex-direction: column;
+			align-items: center;
+
+
 		}
 	}
 }
@@ -531,6 +578,13 @@ body {
 		align-items: center;
 		cursor: pointer;
 		font-size: 20px;
+
+		@media (max-width: 1300px) {
+			flex: 0 1 20%;
+			margin: 0 10px;
+			padding: 10px;
+			font-size: 16px;
+		}
 
 		&._active {
 			font-weight: 600;
@@ -647,6 +701,11 @@ body {
 			font-weight: 600;
 			font-size: 30px;
 			margin: 0px 0px 30px 0px;
+
+			@media (max-width: 1400px) {
+				font-size: 25px;
+				text-align: center;
+			}
 		}
 
 		// .table__500
@@ -782,6 +841,10 @@ body {
 	// .isol__item-simple
 
 	&__item-simple {
+		@media (max-width:1400px) {
+			flex: 0 0 45%;
+		}
+
 		@media (max-width:$md2+px) {
 			flex: 1 0 100%;
 		}
@@ -790,6 +853,10 @@ body {
 	// .isol__item-doors
 
 	&__item-doors {
+		@media (max-width:1400px) {
+			flex: 0 0 45%;
+		}
+
 		@media (max-width:$md2+px) {
 			display: none;
 		}
@@ -798,7 +865,7 @@ body {
 	// .isol__item-side-door
 
 	&__item-side-door {
-		@media (max-width:$md2+px) {
+		@media (max-width:1400px) {
 			display: none;
 		}
 	}

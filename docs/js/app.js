@@ -127,15 +127,15 @@ const head = document.head;
 const meta = document.querySelector('meta[name="viewport"]');
 const content = meta.getAttribute('content');
 
-if (intViewportWidth <= 900) {
-    meta.setAttribute('content', 'width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0');
-    // isol.classList.add('_swiper');
+// if (intViewportWidth <= 980) {
+//     meta.setAttribute('content', 'width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0');
+//     // isol.classList.add('_swiper');
 
 
-} else {
-    meta.setAttribute('content', 'width=1920');
-    // isol.classList.remove('_swiper');
-}
+// } else {
+//     meta.setAttribute('content', 'width=1920');
+//     // isol.classList.remove('_swiper');
+// }
 
 // window.addEventListener('resize', function () {
 //             if (window.innerWidth <= 1400) {
