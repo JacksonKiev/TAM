@@ -502,8 +502,8 @@ body {
 			}
 		}
 
-		div:not(:last-child) {
-			margin-bottom: 100px;
+		div {
+			margin-bottom: 120px;
 		}
 
 		@media (max-width:$md2+px) {

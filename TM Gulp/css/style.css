@@ -3642,8 +3642,8 @@ body._lock .header._active .menu__list {
   height: 100%;
 }
 
-.one__links div:not(:last-child) {
-  margin-bottom: 100px;
+.one__links div {
+  margin-bottom: 120px;
 }
 
 .list {
