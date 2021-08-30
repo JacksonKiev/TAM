@@ -141,15 +141,7 @@ body {
 		padding: 0;
 	}
 
-	.contacts-title-block {
-
-
-
-		text-align: center;
-		margin-bottom: 50px;
-		font-size: 30px;
-		font-weight: 500;
-	}
+	.contacts-title-block {}
 
 
 
@@ -1076,9 +1068,14 @@ body {
 
 
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	font-size: 30px;
 	font-weight: 500;
+	margin-top: 20px;
+
+	@media (max-width:$md2+px) {
+		font-size: 20px;
+	}
 }
 
 

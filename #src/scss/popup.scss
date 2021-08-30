@@ -135,6 +135,10 @@
 		margin: 0 auto;
 		max-width: 100%;
 
+		@media (max-width:$md2+px) {
+			width: 100%;
+		}
+
 	}
 
 	.selection__button {
@@ -145,6 +149,11 @@
 	.contacts-input {
 		display: flex;
 		justify-content: space-evenly;
+
+		@media (max-width:$md2+px) {
+			display: block;
+			width: 80%;
+		}
 
 		.selection__item {
 			flex: 0 1 30%
@@ -170,6 +179,10 @@
 	textarea {
 		box-shadow: 10px 10px 20px black;
 		width: 70%;
+
+		@media (max-width:$md2+px) {
+			width: 100%;
+		}
 	}
 
 	.popup__close {
