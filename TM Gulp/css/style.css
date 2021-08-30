@@ -4267,6 +4267,10 @@ body._lock .header._active .menu__list {
     display: none;
   }
 
+  .page__wrapper #gal {
+    padding-top: 300px;
+  }
+
   .screen:nth-child(2),
   .screen:nth-child(3) {
     display: none;
