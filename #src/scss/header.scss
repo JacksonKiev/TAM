@@ -9,7 +9,17 @@ body._lock {
 			margin: 0 auto;
 			margin-top: 50px;
 			display: flex;
+
+			&_main {
+				@media (max-width:$md2+px) {
+					display: none;
+				}
+			}
+
+
+
 		}
+
 
 	}
 
@@ -170,6 +180,13 @@ body._lock {
 
 		}
 
+		&_small {
+
+
+			@media (min-width:$md2+px) {
+				display: none;
+			}
+		}
 	}
 
 	// .menu__item

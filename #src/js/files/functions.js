@@ -61,7 +61,6 @@ function ibg() {
 ibg();
 
 if (document.querySelector('.wrapper')) {
-	console.log('wrapper')
 	document.querySelector('.wrapper').classList.add('_loaded');
 
 } else {
@@ -85,6 +84,7 @@ if (location.hash) {
 let iconMenu = document.querySelector(".icon-menu");
 let header = document.querySelector(".header");
 let footer = document.querySelector(".footer");
+let menuLinksAll = document.querySelectorAll('.menu__link');
 if (iconMenu != null) {
 	let delay = 500;
 	let menuBody = document.querySelector(".menu__body");
@@ -92,9 +92,18 @@ if (iconMenu != null) {
 		if (unlock) {
 			body_lock(delay);
 			iconMenu.classList.toggle("_active");
+			menuLinks = [];
+			console.dir(menuLinks);
 			menuBody.classList.toggle("_active");
 			header.classList.toggle("_active");
 			footer.classList.toggle("_active");
+			for (let i = 0; i < menuLinksAll.length; i++) {
+
+				menuLinksAll[i].classList.remove('menu__link_header');
+				menuLinksAll[i].classList.remove('_active-block')
+				menuLinksAll[i].href = menuLinksAll[i].attributes.getNamedItem('data-link').value;
+
+			}
 		}
 	});
 };
