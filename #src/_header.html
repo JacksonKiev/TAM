@@ -1,7 +1,8 @@
 <header class="header">
 
 	<div class="header__content _container">
-		<div class="header__logo"><a href="index.html"><img src="img/tam-logo.png" alt=""></a> <span> Термо Авто
+		<div class="header__logo"><a href="index.html"><img class="header__logo_html" src="img/tam-logo.png" alt=""></a>
+			<span> Термо Авто
 				Мастер</span></div>
 		<div class="header__menu menu">
 			<button type="button" class="menu__icon icon-menu">
@@ -9,23 +10,35 @@
 				<span></span>
 				<span></span>
 			</button>
-			<nav class="menu__list menu__list_main">
+			<nav class="menu__body">
 				<!-- <a href="#one__about" class="menu__link  menu__link_header ">О компании</a> -->
-				<a data-link='about.html' href="#one__about" class="menu__link menu__link_header">О компании</a>
-				<a data-link='about.html' href="#hou" class="menu__link  menu__link_header ">Обладнання</a>
-				<a data-link='about.html' href="#isol" class="menu__link  menu__link_header">Послуги</a>
-				<a data-link='index.html' href="#gallery-block" class="menu__link  menu__link_header">Галерея</a>
-				<a data-link='about.html' href="#contacts" class='menu__link _popup-link'>Контакты</a>
+				<ul class="menu__list menu__list_main">
+					<li class="menu-item"> <a data-link='about.html' href="#one__about"
+							class="menu__link menu__link_header">О
+							компании</a> </li>
+					<li class="menu-item"> <a data-link='about.html' href="#hou"
+							class="menu__link  menu__link_header ">Обладнання</a>
+					<li class="menu-item"> <a data-link='about.html' href="#isol"
+							class="menu__link  menu__link_header">Послуги</a> </li>
+					<li class="menu-item"> <a data-link='index.html' href="#gallery-block"
+							class="menu__link  menu__link_header">Галерея</a> </li>
+					<li class="menu-item"> <a data-link='about.html' href="#contacts"
+							class='menu__link _popup-link'>Контакты</a> </li>
+				</ul>
 
 			</nav>
-			<nav class="menu__list menu__list_small">
-				<!-- <a href="#one__about" class="menu__link  menu__link_header ">О компании</a> -->
-				<a data-link='about.html' href="#one__about" class="menu__link ">О компании</a>
-				<a data-link='hou.html' href="#hou" class="menu__link  ">Обладнання</a>
-				<a data-link='service.html' href="#isol" class="menu__link  ">Послуги</a>
-				<a data-link='index.html#gal' href="#gallery-block" class="menu__link  m">Галерея</a>
-				<a data-link='#contacts' href="#contacts" class='menu__link _popup-link'>Контакты</a>
 
+			<ul class="menu__list menu__list_small">
+				<!-- <a href="#one__about" class="menu__link  menu__link_header ">О компании</a> -->
+				<li class="menu-item"> <a data-link='about.html' href="#one__about" class="menu__link ">О компании</a>
+				</li>
+				<li class="menu-item"> <a data-link='hou.html' href="#hou" class="menu__link  ">Обладнання</a> </li>
+				<li class="menu-item"> <a data-link='service.html' href="#isol" class="menu__link  ">Послуги</a> </li>
+				<li class="menu-item"> <a data-link='index.html#gal' href="#gallery-block"
+						class="menu__link  m">Галерея</a> </li>
+				<li class="menu-item"> <a data-link='#contacts' href="#contacts"
+						class='menu__link _popup-link'>Контакты</a> </li>
+			</ul>
 			</nav>
 
 		</div>

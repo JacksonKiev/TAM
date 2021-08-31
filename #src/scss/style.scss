@@ -469,11 +469,28 @@ body {
 				display: none;
 			}
 		}
+
+		@media (max-width: 1200px) {
+			max-width: 85%;
+		}
 	}
 
 	// .one__links
 
 	&__links {
+		&_main {
+			@media (max-width:$md2+px) {
+				display: none;
+			}
+		}
+
+		&_small {
+			display: none;
+
+			@media (max-width:$md2+px) {
+				display: flex;
+			}
+		}
 
 		padding-left: 20px;
 		// flex: 1 1 auto;
@@ -909,9 +926,7 @@ body {
 
 	&__side-door {}
 
-	@media (max-width:$md2+px) {
-		padding-top: 0;
-	}
+
 }
 
 .title {}

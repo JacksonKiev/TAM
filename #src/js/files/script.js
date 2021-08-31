@@ -142,6 +142,23 @@ const content = meta.getAttribute('content');
 //     }
 //     // do stuff here
 // });
+if (intViewportWidth <= 980) {
+    document.querySelector('body').classList.add('adaptive');
+    // if (document.querySelector('.link__iso figure').classList.contains('_gallery')) {
+    //     //для html
+    //     // document.querySelector('.link__iso').innerHTML = "<figure ><a href='service.html'><figcaption>Ізоляція суцільнометалевих кузовів</figcaption><img src='img/gallery/8.jpg' alt=''> </a></figure>";
+
+
+    //     document.querySelector('.link__iso').innerHTML = `<figure ><a href=" "><figcaption>Ізоляція суцільнометалевих кузовів</figcaption><picture><source srcset=" <?php
+    //     echo get_template_directory_uri(). '/assets/' . 'img/' 
+    //    ?>gallery/8.webp" type="image/webp"><img src="<?php echo get_template_directory_uri() . '/assets/' . 'img/' ?>gallery/8.jpg" alt=""></picture> </a></figure>`;
+
+    //     document.querySelector('.link__iso figure a').href = "<?php echo get_template_directory_uri(). '/service'?>";
+    //     // document.querySelector('.link__iso figure picture source').srcset = "1";
+
+    // }
+}
+
 for (let index = 0; index < menuLinksAll.length; index++) {
     const menuLinkAll = menuLinksAll[index];
 

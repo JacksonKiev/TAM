@@ -2732,13 +2732,35 @@ body._lock .header._active .menu__list {
 
 .header__logo img {
   margin-right: 20px;
-  width: 80px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.header__logo_html {
+  width: 80px;
+}
+
 .header__logo-tm {
   margin: 0px 0px 0px 40px;
+}
+
+.custom-logo-link {
+  max-height: 98px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom-logo-link img {
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
+  margin-right: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu__list {
@@ -3629,6 +3651,10 @@ body._lock .header._active .menu__list {
   margin: 0 auto;
 }
 
+.one__links_small {
+  display: none;
+}
+
 .one__links div {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20%;
@@ -4022,6 +4048,10 @@ body._lock .header._active .menu__list {
 }
 
 @media (max-width: 1400px) {
+  .header__logo {
+    font-size: 20px;
+  }
+
   .header__logo span {
     font-size: 20px;
   }
@@ -4092,6 +4122,10 @@ body._lock .header._active .menu__list {
   .screen__content.gallery {
     padding-left: 90px;
   }
+
+  .one__about {
+    max-width: 85%;
+  }
 }
 
 @media (max-width: 1182px) {
@@ -4148,10 +4182,6 @@ body._lock .header._active .menu__list {
     margin: 0 auto;
   }
 
-  .menu__body {
-    display: none;
-  }
-
   .menu__body._active {
     position: absolute;
     display: -webkit-box;
@@ -4178,7 +4208,7 @@ body._lock .header._active .menu__list {
     display: none;
   }
 
-  .menu__link {
+  .menu-item {
     font-weight: 600;
     margin-bottom: 20px;
   }
@@ -4292,6 +4322,16 @@ body._lock .header._active .menu__list {
     display: none;
   }
 
+  .one__links_main {
+    display: none;
+  }
+
+  .one__links_small {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .one__links div figcaption {
     font-size: 25px;
     text-align: center;
@@ -4319,10 +4359,6 @@ body._lock .header._active .menu__list {
 
   .isol__item-doors {
     display: none;
-  }
-
-  .isol {
-    padding-top: 0;
   }
 
   .gallery-block {

@@ -81,6 +81,12 @@ body._lock {
 		text-transform: uppercase;
 
 
+
+		@media (max-width: 1400px) {
+			font-size: 20px;
+		}
+
+
 		span {
 			@media (max-width: 1400px) {
 				font-size: 20px;
@@ -94,8 +100,11 @@ body._lock {
 
 		img {
 			margin-right: 20px;
-			width: 80px;
 			object-fit: cover;
+		}
+
+		&_html {
+			width: 80px;
 		}
 	}
 
@@ -127,7 +136,18 @@ body._lock {
 
 
 
+.custom-logo-link {
+	max-height: 98px;
+	display: flex;
+	align-items: center;
+}
 
+.custom-logo-link img {
+	transform: scale(0.5);
+	margin-right: 20px;
+
+	object-fit: cover;
+}
 
 
 
@@ -142,7 +162,7 @@ body._lock {
 
 	&__body {
 		@media (max-width:$md2+px) {
-			display: none;
+
 
 			&._active {
 				position: absolute;
@@ -191,7 +211,19 @@ body._lock {
 
 	// .menu__item
 
-	&__item {}
+	&__item {
+		// @media (max-width:$md2+px) {
+		// 	font-weight: 600;
+		// 	margin-bottom: 20px;
+		// }
+	}
+
+	&-item {
+		@media (max-width:$md2+px) {
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+	}
 
 	// .menu__link
 
@@ -202,10 +234,10 @@ body._lock {
 		margin-right: 10px;
 		transition: color 0.3s ease 0s;
 
-		@media (max-width:$md2+px) {
-			font-weight: 600;
-			margin-bottom: 20px;
-		}
+		// @media (max-width:$md2+px) {
+		// 	font-weight: 600;
+		// 	margin-bottom: 20px;
+		// }
 
 		&:hover {
 			@media (min-width:$md2+px) {
