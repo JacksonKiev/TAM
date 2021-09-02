@@ -2752,6 +2752,7 @@ body._lock .header._active .menu__list {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 120px;
 }
 
 .custom-logo-link img {
@@ -3384,15 +3385,16 @@ body._lock .header._active .menu__list {
 
 .page a.inquiry {
   position: fixed;
-  top: 15%;
+  top: 21%;
   right: 5%;
   z-index: 10;
   display: inline-block;
   color: black;
-  padding: 20px;
+  padding: 10px;
   font-size: 1.5em;
   font-weight: 600;
   background-color: red;
+  opacity: 0.7;
   text-shadow: 1px 1px 2px black;
   -webkit-box-shadow: 7px 7px 1px pink;
           box-shadow: 7px 7px 1px pink;
@@ -3803,6 +3805,14 @@ body._lock .header._active .menu__list {
   text-align: center;
   font-size: 25px;
   padding-top: 20px;
+}
+
+.tabs-block .table__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .tabs-block .table__title {
@@ -4298,7 +4308,7 @@ body._lock .header._active .menu__list {
   }
 
   .page__wrapper #gal {
-    padding-top: 130px;
+    padding-top: 92px;
   }
 
   .screen:nth-child(2),
@@ -4330,6 +4340,10 @@ body._lock .header._active .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .one__links_small .link__dealers {
+    margin-bottom: 0;
   }
 
   .one__links div figcaption {
@@ -4372,6 +4386,13 @@ body._lock .header._active .menu__list {
   }
 }
 
+@media (max-width: 991.98px) and (max-width: 340px) {
+  .icon-menu {
+    width: 27px;
+    height: 24px;
+  }
+}
+
 @media screen and (max-width: 980px) {
   .footer__widget_social {
     text-align: center;
@@ -4382,6 +4403,28 @@ body._lock .header._active .menu__list {
   ._container {
     max-width: none;
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header__logo {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 340px) {
+  .header__logo {
+    font-size: 18px;
+    text-transform: none;
+    padding-right: 0px;
+  }
+
+  .custom-logo-link img {
+    -webkit-transform: scale(0.4);
+        -ms-transform: scale(0.4);
+            transform: scale(0.4);
+    margin-right: -43px;
+    margin-left: -38px;
   }
 }
 

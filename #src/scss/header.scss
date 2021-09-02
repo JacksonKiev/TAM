@@ -86,6 +86,16 @@ body._lock {
 			font-size: 20px;
 		}
 
+		@media (max-width: 420px) {
+			padding-right: 40px;
+
+		}
+
+		@media (max-width: 340px) {
+			font-size: 18px;
+			text-transform: none;
+			padding-right: 0px;
+		}
 
 		span {
 			@media (max-width: 1400px) {
@@ -140,14 +150,23 @@ body._lock {
 	max-height: 98px;
 	display: flex;
 	align-items: center;
+	max-width: 120px;
+
+	@media (max-width: 340px) {}
 }
 
 .custom-logo-link img {
 	transform: scale(0.5);
 	margin-right: 20px;
-
 	object-fit: cover;
+
+	@media (max-width: 340px) {
+		transform: scale(0.4);
+		margin-right: -43px;
+		margin-left: -38px;
+	}
 }
+
 
 
 
@@ -278,6 +297,11 @@ body._lock {
 		height: 28px;
 		cursor: pointer;
 		z-index: 5;
+
+		@media (max-width: 340px) {
+			width: 27px;
+			height: 24px;
+		}
 
 		span {
 			transition: all 0.5s ease 0s;

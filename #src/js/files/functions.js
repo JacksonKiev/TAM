@@ -92,11 +92,13 @@ if (iconMenu != null) {
 		if (unlock) {
 			body_lock(delay);
 			iconMenu.classList.toggle("_active");
-			menuLinks = [];
-			console.dir(menuLinks);
 			menuBody.classList.toggle("_active");
 			header.classList.toggle("_active");
 			footer.classList.toggle("_active");
+			// document.querySelector('.page__wrapper').classList.toggle('page__wrapper_adaptive');
+
+
+
 			for (let i = 0; i < menuLinksAll.length; i++) {
 
 				menuLinksAll[i].classList.remove('menu__link_header');

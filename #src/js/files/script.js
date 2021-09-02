@@ -50,7 +50,7 @@ if (document.getElementsByClassName('page__body').length > 0) {
             slideChange: function () {
                 menuSliderRemove();
                 menuLinks[pageSlider.realIndex].classList.add('_active-block');
-                console.dir(menuLinks)
+
 
 
             },
@@ -68,8 +68,7 @@ if (document.getElementsByClassName('page__body').length > 0) {
 
 
             menuLinks[pageSlider.realIndex].classList.add('_active-block');
-            console.log(menuLinks.length);
-            // console.log(menuLinks[pageSlider.realIndex]);
+
 
             for (let index = 0; index < menuLinks.length; index++) {
                 const menuLink = menuLinks[index];
@@ -111,7 +110,6 @@ if (document.getElementsByClassName('page__body').length > 0) {
                     wrapper.classList.add('_free');
 
                     pageSlider.params.freeMode = true;
-                    console.log('1');
                     break;
 
                 }
@@ -143,7 +141,7 @@ const content = meta.getAttribute('content');
 //     // do stuff here
 // });
 if (intViewportWidth <= 980) {
-    document.querySelector('body').classList.add('adaptive');
+    document.querySelector('.page__wrapper').classList.add('page__wrapper_adaptive');
     // if (document.querySelector('.link__iso figure').classList.contains('_gallery')) {
     //     //для html
     //     // document.querySelector('.link__iso').innerHTML = "<figure ><a href='service.html'><figcaption>Ізоляція суцільнометалевих кузовів</figcaption><img src='img/gallery/8.jpg' alt=''> </a></figure>";
@@ -158,29 +156,145 @@ if (intViewportWidth <= 980) {
 
     // }
 }
+// Сюда 
+// let wpCL = document.querySelector('.page__wrapper');
 
-for (let index = 0; index < menuLinksAll.length; index++) {
-    const menuLinkAll = menuLinksAll[index];
+// for (let index = 0; index < menuLinksAll.length; index++) {
+//     const menuLinkAll = menuLinksAll[index];
 
-    console.log(menuLinkAll.href);
-    menuLinkAll.addEventListener('click', function (e) {
-        e.preventDefault;
-        if (scr_body.classList.contains('_lock')) {
-            scr_body.classList.remove('_lock');
 
-        }
-        if (header.classList.contains('_active')) {
-            header.classList.remove('_active')
-        }
-        if (iconMenu.classList.contains('_active')) {
-            iconMenu.classList.remove('_active')
-        }
-        if (footer.classList.contains('_active')) {
-            footer.classList.remove('_active')
-        }
+//     menuLinkAll.addEventListener('click', function (e) {
+//         e.preventDefault;
+//         if (scr_body.classList.contains('_lock')) {
+
+//             scr_body.classList.remove('_lock');
+
+//         }
+//         if (header.classList.contains('_active')) {
+
+//             header.classList.remove('_active')
+//         }
+//         if (iconMenu.classList.contains('_active')) {
+
+//             iconMenu.classList.remove('_active')
+//         }
+//         if (footer.classList.contains('_active')) {
+
+//             footer.classList.remove('_active')
+//         }
+
+//         // if (document.querySelector('.page__wrapper').classList.contains('page__wrapper_adaptive')) 
+//         // {
+
+//         //     document.querySelector('.page__wrapper').classList.remove('page__wrapper_adaptive')
+//         // }
+
+//         document.querySelector('.page__wrapper').classList.add('page__wrapper_adaptive')
+//     });
+// }
+
+// document.querySelectorAll('.page__wrapper .page__screen .screen__content#gal').forEach(anchor => {});
+// anchor.addEventListener('click', function (e) {
+// e.preventDefault();
+// document.querySelector(this.getAttribute('href')).scrollIntoView({
+//     behavior: 'smooth'
+// });
+// });
+
+
+// let z = document.querySelectorAll('a');
+// for (let i = 0; i < z.length; i++) {
+//     console.log(z[i]);
+//     console.log(z[i].href);
+// console.log(z[i].dataset.link);
+
+// } 
+function removeClasses() {
+    if (scr_body.classList.contains('_lock')) {
+        scr_body.classList.remove('_lock');
+
+    }
+    if (header.classList.contains('_active')) {
+
+        header.classList.remove('_active')
+    }
+    if (iconMenu.classList.contains('_active')) {
+
+        iconMenu.classList.remove('_active')
+    }
+    if (footer.classList.contains('_active')) {
+
+        footer.classList.remove('_active')
+    }
+    document.querySelector('.page__wrapper').classList.remove('page__wrapper_adaptive');
+}
+
+
+let menuLinkM = document.querySelector('.menu-item_gal a');
+if (menuLinkM) {
+    menuLinkM.addEventListener('click', function (e) {
+
+        console.log(menuLinkM);
+        removeClasses();
 
     });
 }
+
+let menuLinkM59 = document.querySelector('.menu-item-59 a');
+if (menuLinkM59) {
+    menuLinkM59.addEventListener('click', function (e) {
+
+        console.log(menuLinkM59);
+        removeClasses();
+
+    });
+}
+let menuLinkM42 = document.querySelector('.menu-item-42 a');
+if (menuLinkM42) {
+    menuLinkM42.addEventListener('click', function (e) {
+
+        console.log(menuLinkM42);
+        removeClasses();
+
+    });
+}
+
+// e.target.href = e.target.attributes.getNamedItem('data-link').value;
+
+// document.querySelectorAll('a[href="index.html#gal"]').forEach(anchor => {
+// console.log("anchor");
+// console.log(anchor);
+// });
+
+
+
+
+// let wpCustomLinks = document.querySelectorAll('.menu-item-type-custom');
+// for (let index = 0; index < wpCustomLinks.length; index++) {
+//     const wpCustomLink = wpCustomLinks[index];
+//     wpCustomLink.addEventListener('click', function (e) {
+//         e.preventDefault;
+//         if (scr_body.classList.contains('_lock')) {
+//             scr_body.classList.remove('_lock');
+
+//         }
+//         if (header.classList.contains('_active')) {
+//             header.classList.remove('_active')
+//         }
+//         if (iconMenu.classList.contains('_active')) {
+//             iconMenu.classList.remove('_active')
+//         }
+//         if (footer.classList.contains('_active')) {
+//             footer.classList.remove('_active')
+//         }
+//         if (document.querySelector('.page__wrapper').classList.contains('page__wrapper_adaptive')) {
+//             console.log('adapt');
+//             document.querySelector('page__wrapper').classList.remove('page__wrapper_adaptive')
+//         }
+
+//     });
+// }
+
 
 function linkChange(e) {
 
