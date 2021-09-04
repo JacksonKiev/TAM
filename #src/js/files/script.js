@@ -7,6 +7,7 @@ let intViewportWidth = window.innerWidth;
 
 
 if (document.getElementsByClassName('page__body').length > 0) {
+    console.log(intViewportWidth);
     let pageSlider = new Swiper('.page__body', {
         wrapperClass: 'page__wrapper',
         slideClass: 'page__screen',
@@ -226,7 +227,7 @@ function removeClasses() {
 
         footer.classList.remove('_active')
     }
-    document.querySelector('.page__wrapper').classList.remove('page__wrapper_adaptive');
+    // document.querySelector('.page__wrapper').classList.remove('page__wrapper_adaptive');
 }
 
 
@@ -258,7 +259,24 @@ if (menuLinkM42) {
 
     });
 }
+let menuLinkM69 = document.querySelector('.menu-item-69 a');
+if (menuLinkM69) {
+    menuLinkM69.addEventListener('click', function (e) {
 
+        console.log(menuLinkM69);
+        removeClasses();
+
+    });
+}
+let menuLinkM65 = document.querySelector('.menu-item-65 a');
+if (menuLinkM65) {
+    menuLinkM65.addEventListener('click', function (e) {
+
+        console.log(menuLinkM65);
+        removeClasses();
+
+    });
+}
 // e.target.href = e.target.attributes.getNamedItem('data-link').value;
 
 // document.querySelectorAll('a[href="index.html#gal"]').forEach(anchor => {

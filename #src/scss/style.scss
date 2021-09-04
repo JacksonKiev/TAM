@@ -74,11 +74,11 @@ body {
 
 	}
 
-	&._free .page__pagination {
-		opacity: 0;
-		visibility: hidden;
-		transition: all 0.3s ease 0s;
-	}
+	// &._free .page__pagination {
+	// 	opacity: 0;
+	// 	visibility: hidden;
+	// 	transition: all 0.3s ease 0s;
+	// }
 }
 
 //</ОБОЛОЧКА>===========================================================================================================
@@ -145,27 +145,6 @@ body {
 
 
 
-	a.inquiry {
-		position: fixed;
-		top: 21%;
-		right: 5%;
-		z-index: 10;
-		display: inline-block;
-		color: black;
-		padding: 10px;
-		font-size: 1.5em;
-		font-weight: 600;
-		background-color: red;
-		opacity: 0.7;
-		text-shadow: 1px 1px 2px black;
-		box-shadow: 7px 7px 1px pink;
-		transition: all 0.3s ease 0s;
-
-		&:active {
-			box-shadow: 5px 5px 1px pink;
-			right: 4.5%;
-		}
-	}
 
 	&__main {}
 
@@ -179,7 +158,7 @@ body {
 		width: 70%;
 		position: fixed;
 		// width: 100%;
-		height: 100px;
+		height: 100%;
 		top: 0;
 		left: 25%;
 		overflow: hidden;
@@ -191,6 +170,10 @@ body {
 			top: 163px;
 
 
+		}
+
+		@media (max-width: 1200px) {
+			left: 30%;
 		}
 
 		@media (max-width:$md2+px) {
@@ -243,22 +226,25 @@ body {
 
 
 	&__wrapper {
-		display: flex;
-		flex-direction: column;
+		// @media (min-width: 980px) {
+		// 	display: flex;
+		// 	flex-direction: column;
+		// }
+
 		width: 100%;
 		height: 100%;
 
 		& #gal {
 			@media (max-width:$md2+px) {
-				padding-top: 92px;
+				padding-top: 100px;
 			}
 		}
 
-		// &_adaptive #gal {
-		// 	@media (max-width:$md2+px) {
-		// 		padding-top: 0px;
-		// 	}
-		// }
+		&_adaptive .screen .isol .isol__about {
+
+			max-width: 90%;
+
+		}
 	}
 
 
@@ -293,14 +279,22 @@ body {
 		flex: 1 0 auto;
 		padding: 150px 25px 25px 25px;
 
+		@media (max-width: 500px) {
+			padding-top: 27%;
+
+		}
+
 		&.gallery {
 			@media (max-width: 1200px) {
 				padding-left: 90px;
 
 			}
 
+
+
 			@media (max-width:$md2+px) {
-				padding: 0;
+
+				padding: 0 5%;
 			}
 		}
 	}
@@ -392,6 +386,10 @@ body {
 	flex-direction: column;
 	opacity: 0;
 	visibility: hidden;
+
+	@media (max-width:$md2+px) {
+		display: none;
+	}
 }
 
 
@@ -429,6 +427,12 @@ body {
 
 	@media (max-width: 1400px) {
 		font-size: 25px;
+	}
+
+	@media (max-width: 500px) {
+		margin-bottom: 3%;
+		font-size: 20px;
+
 	}
 }
 
@@ -473,51 +477,37 @@ body {
 			@media (max-width:$md2+px) {
 				display: none;
 			}
+
+			@media (max-width: 1200px) {
+				max-width: 85%;
+
+
+			}
 		}
 
-		@media (max-width: 1200px) {
-			max-width: 85%;
-		}
+
 	}
 
 	// .one__links
 
 	&__links {
-		&_main {
-			@media (max-width:$md2+px) {
-				display: none;
-			}
-		}
-
-		&_small {
-			display: none;
-
-			@media (max-width:$md2+px) {
-				display: flex;
-
-				.link__dealers {
-					margin-bottom: 0;
-				}
-			}
-		}
-
-		padding-left: 20px;
-		// flex: 1 1 auto;
 		display: flex;
-		height: 100%;
-		max-width: 90%;
-		margin: 0 auto;
 
 		div {
+			flex: 1 0 30%;
 
-			flex: 1 1 20%;
 			margin-right: 10px;
+			margin-bottom: 10%;
 
+			img {
+				width: 100%;
+				object-fit: fill;
+			}
 
 			figure {
 
 				height: 100%;
-				max-height: 250px;
+
 			}
 
 			figcaption {
@@ -538,6 +528,12 @@ body {
 					text-align: center;
 				}
 
+				@media (max-width: 500px) {
+					font-size: 20px;
+					margin-bottom: 3%;
+
+				}
+
 				// position: relative;
 				// top: 60px;
 			}
@@ -550,9 +546,47 @@ body {
 			}
 		}
 
-		div {
-			margin-bottom: 120px;
+		&_main {
+			@media (max-width: 1200px) {
+				padding-left: 20px;
+
+			}
+
+			@media (max-width:$md2+px) {
+				display: none;
+			}
 		}
+
+		&_small {
+			display: none;
+			padding-left: 20px;
+			// flex: 1 1 auto;
+
+			height: 100%;
+			max-width: 100%;
+			margin: 0 auto;
+
+			div {
+				margin-right: 0;
+			}
+
+			@media (max-width:$md2+px) {
+				display: flex;
+				padding-left: 0;
+
+				.link__dealers {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+
+
+
+
+		// div {
+		// 	margin-bottom: 120px;
+		// }
 
 		@media (max-width:$md2+px) {
 			flex-direction: column;
@@ -631,11 +665,27 @@ body {
 		cursor: pointer;
 		font-size: 20px;
 
+		span {
+			margin-left: 1%;
+		}
+
 		@media (max-width: 1300px) {
 			flex: 0 1 20%;
 			margin: 0 10px;
 			padding: 10px;
 			font-size: 16px;
+		}
+
+		@media (max-width:$md2+px) {
+			flex: 0 1 26%;
+			padding: 1%;
+
+		}
+
+		@media (max-width: 450px) {
+			span {
+				display: none;
+			}
 		}
 
 		&._active {
@@ -653,6 +703,11 @@ body {
 
 	&__body {
 		padding: 50px 0 0 0;
+
+		@media (max-width: 500px) {
+			padding-top: 0;
+
+		}
 	}
 
 	// .tabs-block__block
@@ -692,6 +747,8 @@ body {
 			display: flex;
 			width: 100%;
 			justify-content: space-evenly;
+			flex-wrap: wrap;
+			justify-self: center;
 
 			img {
 				width: 100%;
@@ -705,7 +762,13 @@ body {
 
 		&__descr {
 
-			flex: 0 1 30%;
+			flex: 1 1 30%;
+			margin-bottom: 5%;
+
+			@media (max-width: 500px) {
+				margin: 7% -11% -19% -11%;
+
+			}
 
 			@media (max-width: 1300px) {
 				transform: translateY(-20px) scale(0.7);
@@ -736,15 +799,22 @@ body {
 				padding-top: 20px;
 			}
 
-			@media (max-width:$md2+px) {
-				display: none;
-			}
+
 		}
 
 
 		&__image {
 			display: flex;
 			flex-wrap: nowrap;
+			// flex: 1 1 auto;
+
+			// 	a {
+			// 		&:last-child {
+			// 			@media (max-width:1400px) {
+			// 				display: none;
+			// 			}
+			// 		}
+			// 	}
 		}
 
 		&__400 {}
@@ -756,6 +826,12 @@ body {
 			font-weight: 600;
 			font-size: 30px;
 			margin: 0px 0px 30px 0px;
+
+			@media (max-width: 500px) {
+				margin-bottom: -5%;
+				font-size: 20px;
+
+			}
 
 			@media (max-width: 1400px) {
 				font-size: 25px;
@@ -807,6 +883,7 @@ body {
 
 	&__small {
 		width: 97%;
+		margin: 0 auto;
 		// margin: 0 0 -0px -5%;
 		overflow: hidden;
 
@@ -817,6 +894,7 @@ body {
 	&__middle {
 		width: 97%;
 		overflow: hidden;
+		margin: 0 auto;
 	}
 
 	// .hou__large
@@ -824,6 +902,7 @@ body {
 	&__large {
 		width: 97%;
 		overflow: hidden;
+		margin: 0 auto;
 	}
 }
 
@@ -846,7 +925,7 @@ body {
 
 		max-width: 70%;
 		margin: 0 auto;
-		margin-bottom: 30px;
+		// margin-bottom: 30px;
 
 	}
 
@@ -855,7 +934,7 @@ body {
 	&__types {
 
 		display: flex;
-		margin: 0 auto;
+		margin: 0 auto !important;
 		justify-content: space-between;
 		max-width: 80%;
 
